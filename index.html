@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>💰 Transaction Tracker</h1>
+
+    <!-- Total Section -->
+    <div class="summary">
+      <h3>Total Credit: ₹<span id="total-credit">0</span></h3>
+      <h3>Total Debit: ₹<span id="total-debit">0</span></h3>
+      <h2>Net Balance: ₹<span id="net-balance">0</span></h2>
+    </div>
+
+    <!-- Form Section -->
+    <form id="transaction-form">
+      <div class="input-group">
+        <label>Amount (₹)</label>
+        <input type="number" id="amount" required />
+      </div>
+
+      <div class="input-group">
+        <label>Type</label>
+        <select id="type" required>
+          <option value="">Select</option>
+          <option value="Credit">Credit</option>
+          <option value="Debit">Debit</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Holder Name</label>
+        <input type="text" id="holder" required />
+      </div>
+
+      <div class="input-group">
+        <label>Reason</label>
+        <input type="text" id="reason" placeholder="Why was this credited/debited?" required />
+      </div>
+
+      <div class="input-group">
+        <label>Date</label>
+        <input type="date" id="date" required />
+      </div>
+
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <!-- Reset Button -->
+    <button type="button" id="reset-btn" class="reset-btn">Reset All Transactions</button>
+
+    <hr/>
+
+    <!-- Transaction List -->
+    <div class="transaction-list" id="transaction-list">
+      <!-- Transaction cards inserted here -->
+    </div>
+   
+  </div>
+   <footer style="text-align: center;"><p>&copy; 2025 Raghav yadav | Designed with 💙</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
